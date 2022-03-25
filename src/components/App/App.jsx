@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import GalleryItem from '../GalleryItem/GalleryItem';
+import GalleryList from '../GalleryList/GalleryList';
 
 function App() {
+  
+  let [GalleryList, setGalleryList] = useState([]);
+
+
     return (
       <div className="App">
         <header className="App-header">
