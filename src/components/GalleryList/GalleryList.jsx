@@ -1,6 +1,6 @@
 // destructuring galleryList OUT OF PROPS
 import GalleryItem from '../GalleryItem/GalleryItem';
-function GalleryList({galleryList, updateItem}) {
+function GalleryList({galleryList, updateImage}) {
     console.log(galleryList);
     return (
         <>
@@ -9,6 +9,7 @@ function GalleryList({galleryList, updateItem}) {
                 (<GalleryItem
                     key={gallery.id}
                     gallery={gallery}
+                    updateImage={updateImage}
                 />)
                 )}
             

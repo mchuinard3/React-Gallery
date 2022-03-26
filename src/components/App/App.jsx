@@ -26,11 +26,11 @@ useEffect( () => {
 
 const updateImage = (imageToUpdate) => {
   console.log('Update from App.jsx');
-  axios.put(`/gallery/${imageToUpdate.id}`)
+  axios.put(`/gallery/like/${imageToUpdate.id}`)
       .then(response => {
           //retrieves updated item list:
           getImages();
-          console.log('Updated', itemToUpdate)
+          console.log('Updated', imageToUpdate)
       }).catch(err => {
           console.log('Error in update', err);
       })
