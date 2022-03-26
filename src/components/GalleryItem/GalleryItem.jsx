@@ -11,12 +11,13 @@ function GalleryItem({gallery, updateImage}) {
     }
 
     return(
-        <>
         
-        <img className="pictures" src={gallery.path}/>
-        <div> {like} people like this</div>
+        <div>
+        <img className="pictures" src={gallery.path} />
+        <p> {like} people like this</p>
         <button onClick={handleLike}>Like</button>
-        </>
+        </div>
+        
     );
 }
 
