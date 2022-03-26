@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import axios from 'axios';
 import './App.css';
-import GalleryItem from '../GalleryItem/GalleryItem';
+
 import GalleryList from '../GalleryList/GalleryList';
 
 
@@ -26,10 +26,10 @@ useEffect( () => {
 
 const updateImage = (imageToUpdate) => {
   console.log('Update from App.jsx');
-  axios.put(`/list/${imageToUpdate.id}`)
+  axios.put(`/gallery/${imageToUpdate.id}`)
       .then(response => {
           //retrieves updated item list:
-          getImage();
+          getImages();
           console.log('Updated', itemToUpdate)
       }).catch(err => {
           console.log('Error in update', err);
@@ -56,7 +56,7 @@ const updateImage = (imageToUpdate) => {
                     updateImage={updateImage}
                 />
             </main>
-        <img src="images/goat_small.jpg"/>
+        {/* <img src="images/goat_small.jpg"/> */}
       </div>
     );
 }
