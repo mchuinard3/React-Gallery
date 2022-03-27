@@ -1,7 +1,7 @@
 import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList({ galleryList, updateImage }) { // This component loops through the GalleryItem component, 
-    // and it de-structures galleryList and updateImage out of props 
+function GalleryList({ galleryList, updateImage }) { // This component de-structures galleryList and updateImage out of 
+    // props, then it loops through the galleryList, which now contains the galleryItems array 
     console.log(galleryList);
     return (
         <>

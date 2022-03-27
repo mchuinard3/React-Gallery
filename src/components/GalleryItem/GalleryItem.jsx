@@ -13,10 +13,10 @@ function GalleryItem({ gallery, updateImage }) { // This component adds a like t
     }
 
     const handleGallery = () => {
-
         console.log('clicked');
         setShowGallery(!showGallery)
     }
+    
     return (
         <>
             <div onClick={handleGallery}>

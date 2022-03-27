@@ -25,7 +25,6 @@ function App() { // This component contains a get route for the gallery of pictu
     console.log('Update from App.jsx');
     axios.put(`/gallery/like/${imageToUpdate.id}`)
       .then(response => {
-        //retrieves updated item list:
         getImages();
         console.log('Updated', imageToUpdate)
       }).catch(err => {
