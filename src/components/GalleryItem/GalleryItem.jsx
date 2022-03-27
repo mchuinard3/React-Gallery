@@ -16,19 +16,24 @@ function GalleryItem({ gallery, updateImage }) {
         setShowGallery(!showGallery)
     }
     return (
+        <>
         <div onClick={handleGallery}>
-    
-    {showGallery ? <p>{gallery.description}</p> : <img className="pictures" src={gallery.path} />}
-        
 
-    
-
-       
-            
-            <p> {gallery.likes} people like this</p>
-            <button onClick={handleLike}>Like</button>
+            {showGallery ? <p>{gallery.description}</p> : <img className="pictures" src={gallery.path} />}
         </div>
 
+
+
+        <div>
+
+            <p> {gallery.likes} people like this</p>
+            
+        </div>
+
+        <div>
+        <button onClick={handleLike}>Like</button>
+        </div>
+        </>
     );
 }
 
