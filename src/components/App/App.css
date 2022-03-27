@@ -13,3 +13,13 @@
   font-size: 1.5em;
 }
 
+.pictures {
+  padding: 10px;
+  height: 200px;
+  width: 200px;
+}
+
+body {
+  background-color: #fff8dc;
+}
+
