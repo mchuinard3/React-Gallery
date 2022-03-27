@@ -1,23 +1,34 @@
-import React, { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
-function GalleryItem({gallery, updateImage}) {
+function GalleryItem({ gallery, updateImage }) {
 
-    
+    const [showGallery, setShowGallery] = useState(false);
 
     const handleLike = () => {
         console.log('liked')
-        
+
         updateImage(gallery)
     }
 
-    return(
+    const handleGallery = () => {
+
+        console.log('clicked');
+        setShowGallery(!showGallery)
+    }
+    return (
+        <div onClick={handleGallery}>
+    
+    {showGallery ? <p>{gallery.description}</p> : <img className="pictures" src={gallery.path} />}
         
-        <div>
-        <img className="pictures" src={gallery.path} />
-        <p> {gallery.likes} people like this</p>
-        <button onClick={handleLike}>Like</button>
+
+    
+
+       
+            
+            <p> {gallery.likes} people like this</p>
+            <button onClick={handleLike}>Like</button>
         </div>
-        
+
     );
 }
 
